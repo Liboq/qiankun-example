@@ -13,5 +13,8 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "http-server": "^13.0.0"
+  },
+  "dependencies": {
+    "win-bash": "^1.0.1"
   }
 }
