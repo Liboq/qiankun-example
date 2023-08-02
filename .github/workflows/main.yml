@@ -15,23 +15,23 @@ jobs:
               # 使用action库  actions/checkout获取源码
               uses: actions/checkout@master
 
-            # # 安装Node10
+            # # 安装Node16
             - name: 安装node.js
             # # 使用action库  actions/setup-node安装node
               uses: actions/setup-node@v2.5.1
               with:
-                   node-version: 16.14.0
+                   node-version: '16.x'
 
             # 安装依赖
             - name: 安装依赖
-              run: npm install
+              run: npm run install
 
             # 打包
             - name: 打包
               run: npm run build
 
-            # # 上传阿里云
-            # - name: 发布到阿里云
+            # # 上传腾讯云
+            # - name: 发布到腾讯云
             #   uses: easingthemes/ssh-deploy@v2.1.1
             #   env:
             #       # 私钥
@@ -55,5 +55,5 @@ jobs:
                 server: '${{ secrets.REMOTE_HOST }}' #引用之前创建好的secret
                 ssh_private_key: ${{ secrets.PRIVATE_KEY }} #引用之前创建好的secret
                 local_path: './dist/*' # 对应我们项目build的文件夹路径
-                remote_path: '/www/wwwroot/cms.panjingyi.top'
+                remote_path: '/www/wwwroot/qiankun-example'
                   
