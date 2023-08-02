@@ -29,7 +29,7 @@ jobs:
 
             # 打包
             - name: 打包
-              run:  pnpm run build
+              run:  pnpm  build
 
             # # 上传腾讯云
             # - name: 发布到腾讯云
