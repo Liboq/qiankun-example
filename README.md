@@ -26,5 +26,10 @@ npm start
 ```
 npm run build
 ```
+## CICD学习
+`github Action workflow`
+
+## 腾讯云部署
+`nginx` 配置
 
 
